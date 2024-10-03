@@ -56,7 +56,7 @@ const signin = async (req, res) => { // Fix typo (req.res => req, res)
         }
 
         const token = generateToken(email);
-        return res.send(token); // Send the token response
+        return res.send(token);
     } catch (error) {
         console.log(error);
         return res.status(500).send("An error occurred during signin");
